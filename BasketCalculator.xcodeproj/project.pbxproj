@@ -18,6 +18,8 @@
 		512C580E1EEEC41F006D7651 /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 512C580D1EEEC41F006D7651 /* rates.json */; };
 		512C58101EEEC452006D7651 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C580F1EEEC452006D7651 /* CheckoutViewController.swift */; };
 		512C58121EEED0E8006D7651 /* PurchasableItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */; };
+		512C58141EEEEB1A006D7651 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C58131EEEEB1A006D7651 /* model.swift */; };
+		512C58161EEEEB32006D7651 /* CurrencySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C58151EEEEB32006D7651 /* CurrencySource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		512C580D1EEEC41F006D7651 /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
 		512C580F1EEEC452006D7651 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasableItemViewController.swift; sourceTree = "<group>"; };
+		512C58131EEEEB1A006D7651 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		512C58151EEEEB32006D7651 /* CurrencySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencySource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +91,11 @@
 		512C57E71EEEBD0F006D7651 /* BasketCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				512C58131EEEEB1A006D7651 /* model.swift */,
 				512C57E81EEEBD0F006D7651 /* AppDelegate.swift */,
-				512C57EC1EEEBD0F006D7651 /* Main.storyboard */,
-				512C57EA1EEEBD0F006D7651 /* ViewController.swift */,
-				512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */,
-				512C580B1EEEC0FC006D7651 /* Checkout.storyboard */,
-				512C580F1EEEC452006D7651 /* CheckoutViewController.swift */,
+				512C58171EEEEB61006D7651 /* storyboards */,
+				512C58181EEEEB70006D7651 /* view controllers */,
+				512C58151EEEEB32006D7651 /* CurrencySource.swift */,
 				512C580D1EEEC41F006D7651 /* rates.json */,
 				512C57F21EEEBD0F006D7651 /* Assets.xcassets */,
 				512C57F41EEEBD0F006D7651 /* LaunchScreen.storyboard */,
@@ -109,6 +112,25 @@
 				512C58021EEEBD0F006D7651 /* Info.plist */,
 			);
 			path = BasketCalculatorTests;
+			sourceTree = "<group>";
+		};
+		512C58171EEEEB61006D7651 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				512C57EC1EEEBD0F006D7651 /* Main.storyboard */,
+				512C580B1EEEC0FC006D7651 /* Checkout.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		512C58181EEEEB70006D7651 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				512C57EA1EEEBD0F006D7651 /* ViewController.swift */,
+				512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */,
+				512C580F1EEEC452006D7651 /* CheckoutViewController.swift */,
+			);
+			name = "view controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				512C58101EEEC452006D7651 /* CheckoutViewController.swift in Sources */,
+				512C58141EEEEB1A006D7651 /* model.swift in Sources */,
 				512C57EB1EEEBD0F006D7651 /* ViewController.swift in Sources */,
+				512C58161EEEEB32006D7651 /* CurrencySource.swift in Sources */,
 				512C57F11EEEBD0F006D7651 /* BasketCalculator.xcdatamodeld in Sources */,
 				512C58121EEED0E8006D7651 /* PurchasableItemViewController.swift in Sources */,
 				512C57E91EEEBD0F006D7651 /* AppDelegate.swift in Sources */,

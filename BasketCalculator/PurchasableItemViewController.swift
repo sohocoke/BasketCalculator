@@ -44,22 +44,3 @@ class PurchasableItemViewController: UIViewController {
     (self.parent as! ViewController).itemQuantityChanged(item: self.item!, quantity: self.quantity)
   }
 }
-
-
-
-struct PurchasableItem: Hashable, Equatable {
-  let name: String
-  let price: Double
-  
-  var hashValue: Int {
-    // quick+dirty: offload to the name string.
-    return self.name.hashValue
-  }
-  
-  static func ==(a: PurchasableItem, b: PurchasableItem) -> Bool {
-    return
-      a.name == b.name
-      && a.price == b.price
-  }
-}
-

@@ -52,30 +52,3 @@ class ViewController: UIViewController {
   }()
 
 }
-
-
-
-struct Basket {
-
-  var ordersByItem: [PurchasableItem : Int] = [:]
-  
-  mutating func update(item: PurchasableItem, withQuantity quantity: Int) {
-    self.ordersByItem[item] = quantity
-  }
-  
-  var totalInReferenceCurrency: Double {
-    var total = Double(0)
-    for (item, quantity) in ordersByItem {
-      total += item.price * Double(quantity)
-    }
-    return total
-  }
-  
-  func total(inRate rate: RateData) -> Double {
-    if rate.fromCurrency != "USD" {
-      fatalError("must use a rate that converts from USD")
-    }
-    return totalInReferenceCurrency * rate.multiplier
-  }
-}
-
