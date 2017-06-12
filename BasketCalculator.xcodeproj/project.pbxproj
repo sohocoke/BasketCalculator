@@ -15,6 +15,9 @@
 		512C57F61EEEBD0F006D7651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512C57F41EEEBD0F006D7651 /* LaunchScreen.storyboard */; };
 		512C58011EEEBD0F006D7651 /* BasketCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C58001EEEBD0F006D7651 /* BasketCalculatorTests.swift */; };
 		512C580C1EEEC0FC006D7651 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512C580B1EEEC0FC006D7651 /* Checkout.storyboard */; };
+		512C580E1EEEC41F006D7651 /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 512C580D1EEEC41F006D7651 /* rates.json */; };
+		512C58101EEEC452006D7651 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C580F1EEEC452006D7651 /* CheckoutViewController.swift */; };
+		512C58121EEED0E8006D7651 /* PurchasableItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		512C58001EEEBD0F006D7651 /* BasketCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCalculatorTests.swift; sourceTree = "<group>"; };
 		512C58021EEEBD0F006D7651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		512C580B1EEEC0FC006D7651 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
+		512C580D1EEEC41F006D7651 /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
+		512C580F1EEEC452006D7651 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasableItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,12 @@
 			isa = PBXGroup;
 			children = (
 				512C57E81EEEBD0F006D7651 /* AppDelegate.swift */,
-				512C57EA1EEEBD0F006D7651 /* ViewController.swift */,
 				512C57EC1EEEBD0F006D7651 /* Main.storyboard */,
+				512C57EA1EEEBD0F006D7651 /* ViewController.swift */,
+				512C58111EEED0E8006D7651 /* PurchasableItemViewController.swift */,
 				512C580B1EEEC0FC006D7651 /* Checkout.storyboard */,
+				512C580F1EEEC452006D7651 /* CheckoutViewController.swift */,
+				512C580D1EEEC41F006D7651 /* rates.json */,
 				512C57F21EEEBD0F006D7651 /* Assets.xcassets */,
 				512C57F41EEEBD0F006D7651 /* LaunchScreen.storyboard */,
 				512C57F71EEEBD0F006D7651 /* Info.plist */,
@@ -191,6 +200,7 @@
 				512C57F61EEEBD0F006D7651 /* LaunchScreen.storyboard in Resources */,
 				512C57F31EEEBD0F006D7651 /* Assets.xcassets in Resources */,
 				512C57EE1EEEBD0F006D7651 /* Main.storyboard in Resources */,
+				512C580E1EEEC41F006D7651 /* rates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512C58101EEEC452006D7651 /* CheckoutViewController.swift in Sources */,
 				512C57EB1EEEBD0F006D7651 /* ViewController.swift in Sources */,
 				512C57F11EEEBD0F006D7651 /* BasketCalculator.xcdatamodeld in Sources */,
+				512C58121EEED0E8006D7651 /* PurchasableItemViewController.swift in Sources */,
 				512C57E91EEEBD0F006D7651 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
