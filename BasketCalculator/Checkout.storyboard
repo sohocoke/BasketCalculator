@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Checkout View Controller-->
         <scene sceneID="INJ-8N-VUA">
             <objects>
-                <viewController id="sSG-uk-MjN" sceneMemberID="viewController">
+                <viewController id="sSG-uk-MjN" customClass="CheckoutViewController" customModule="BasketCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZzG-WR-OXW"/>
                         <viewControllerLayoutGuide type="bottom" id="uXO-FG-iKx"/>
@@ -21,16 +21,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-8y-YSq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-8y-YSq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="296.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: XYZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W2-GW-tFk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-Jz-ihe">
+                                        <rect key="frame" x="0.0" y="20.5" width="375" height="216"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="sSG-uk-MjN" id="GNs-dL-Hkx"/>
+                                            <outlet property="delegate" destination="sSG-uk-MjN" id="7SR-zL-dRb"/>
+                                        </connections>
+                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-TD-eax">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="236.5" width="375" height="30"/>
+                                        <state key="normal" title="Change Currency"/>
+                                        <connections>
+                                            <action selector="action_changeCurrency:" destination="sSG-uk-MjN" eventType="touchUpInside" id="1AQ-eO-0o4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Yp-s3p">
-                                        <rect key="frame" x="0.0" y="30" width="375" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-Yp-s3p" userLabel="Pay Now">
+                                        <rect key="frame" x="0.0" y="266.5" width="375" height="30"/>
+                                        <state key="normal" title="Pay Now"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -42,6 +59,12 @@
                             <constraint firstItem="lkC-8y-YSq" firstAttribute="top" secondItem="IkQ-uU-U17" secondAttribute="top" id="u79-Ik-2Cl"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="changeCurrencyButton" destination="UC0-TD-eax" id="Gy4-qX-4vf"/>
+                        <outlet property="currencySelector" destination="wfB-Jz-ihe" id="we9-41-le8"/>
+                        <outlet property="totalLabel" destination="6W2-GW-tFk" id="mCK-e4-pk8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ol-EV-Yx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
