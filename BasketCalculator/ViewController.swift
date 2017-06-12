@@ -42,7 +42,6 @@ class ViewController: UIViewController {
   
   
   func itemQuantityChanged(item: PurchasableItem, quantity: Int) {
-    print("TODO update basket.")
     self.checkoutViewController.basket.update(item: item, withQuantity: quantity)
     
   }
@@ -70,6 +69,13 @@ struct Basket {
       total += item.price * Double(quantity)
     }
     return total
+  }
+  
+  func total(inRate rate: RateData) -> Double {
+    if rate.fromCurrency != "USD" {
+      fatalError("must use a rate that converts from USD")
+    }
+    return totalInReferenceCurrency * rate.multiplier
   }
 }
 
